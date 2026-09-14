@@ -4,6 +4,8 @@ A full-stack car rental management system built with **Flask** and **MongoDB Atl
 
 The system automates car rental operations — vehicle management, customer bookings, payments, and reviews — while demonstrating core Advanced Database Systems concepts on a real-world application.
 
+   📄 [Full Project Report](Project_Documentation_ADB.pdf)
+
 ## Features
 
 - **CRUD operations** across cars, bookings, users, payments, and reviews
