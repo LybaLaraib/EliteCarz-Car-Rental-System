@@ -2,9 +2,9 @@
 
 A full-stack car rental management system built with **Flask** and **MongoDB Atlas**, developed as the final project for *CSC 316 – Advanced Database Systems* at COMSATS University Islamabad.
 
-The system automates car rental operations — vehicle management, customer bookings, payments, and reviews — while demonstrating core Advanced Database Systems concepts on a real-world application.
+📄 [Full Project Report](Project_Documentation_ADB.pdf)
 
-   📄 [Full Project Report](Project_Documentation_ADB.pdf)
+The system automates car rental operations — vehicle management, customer bookings, payments, and reviews — while demonstrating core Advanced Database Systems concepts on a real-world application.
 
 ## Features
 
@@ -39,10 +39,9 @@ The system automates car rental operations — vehicle management, customer book
 
 ## Setup & Running Locally
 
-1. Clone the repository and install dependencies:
+1. Install dependencies:
 
 pip install -r requirements.txt
-
 
 2. Create a `.env` file in the project root with your own MongoDB Atlas credentials:
 
@@ -50,17 +49,15 @@ MONGO_URI=your_mongodb_connection_string
 DB_NAME=CarRentalFinal
 SECRET_KEY=your_secret_key
 
-
 3. Populate the database with sample data:
 
 python seed.py
-
 
 4. Run the application:
 
 python app.py
 
-   Visit `http://127.0.0.1:5000`
+Then visit `http://127.0.0.1:5000`
 
 ### Test credentials
 - **Admin login:** username `admin`, password `admin123`
