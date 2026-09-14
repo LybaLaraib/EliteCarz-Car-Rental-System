@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{# User page for viewing personal review history. #}
+{% block content %}
+<h2>My Reviews</h2>
+<form class="card search-row" method="GET">
+  <input name="q" placeholder="Search car id or comment" value="{{ q or '' }}">
+  <button class="btn">Filter</button>
+  <a class="btn btn-secondary" href="/my-reviews">Reset</a>
+</form>
+<div class="grid two">
+{% for r in reviews %}
+  <article class="card">
+    {% if r._car %}
+      <img class="card-img" src="{{ r._car.image_url }}" alt="{{ r._car.brand }} {{ r._car.model }}" loading="lazy">
+    {% endif %}
+    <h3 style="margin-top:{% if r._car %}12px{% else %}0{% endif %};">
+      {{ r.car_id }}{% if r._car %} — {{ r._car.brand }} {{ r._car.model }}{% endif %}
+    </h3>
+    <p>{{ "★" * r.rating }}{{ "☆" * (5 - r.rating) }}</p>
+    <p>{{ r.comment }}</p>
+  </article>
+{% else %}
+  <p>No reviews yet.</p>
+{% endfor %}
+</div>
+
+{% if pager and pager.total_pages > 1 %}
+<div class="pagination">
+  {% if pager.has_prev %}
+    <a href="?page={{ pager.prev_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}">Prev</a>
+  {% else %}
+    <span>Prev</span>
+  {% endif %}
+  <span class="current">Page {{ pager.page }} / {{ pager.total_pages }}</span>
+  {% if pager.has_next %}
+    <a href="?page={{ pager.next_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

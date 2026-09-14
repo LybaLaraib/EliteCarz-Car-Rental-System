@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{# User page for viewing personal booking history. #}
+{% block content %}
+<h2>My Bookings</h2>
+<form class="card search-row" method="GET">
+  <input name="q" placeholder="Search car id or status" value="{{ q or '' }}">
+  <button class="btn">Filter</button>
+  <a class="btn btn-secondary" href="/my-bookings">Reset</a>
+</form>
+<div class="grid two">
+{% for b in bookings %}
+  <article class="card">
+    {% if b._car %}
+      <img class="card-img" src="{{ b._car.image_url }}" alt="{{ b._car.brand }} {{ b._car.model }}" loading="lazy">
+    {% endif %}
+    <h3 style="margin-top:{% if b._car %}12px{% else %}0{% endif %};">{{ b.booking_uid or b._id }}</h3>
+    <p>Car: {{ b.car_id }}{% if b._car %} — {{ b._car.brand }} {{ b._car.model }}{% endif %}</p>
+    <p>Status: <span class="status-pill status-{{ b.status }}">{{ b._status_label }}</span></p>
+    {% if b.cancel_reason %}
+      <p>Reason: {{ b.cancel_reason }}</p>
+    {% endif %}
+    <p>Dates: {{ b.start_date }} to {{ b.end_date }}</p>
+    <p>Total: PKR {{ b.total_price }}</p>
+    <p>Pickup city: {{ b.pickup_city or "-" }}</p>
+  </article>
+{% else %}
+  <p>No bookings yet.</p>
+{% endfor %}
+</div>
+
+{% if pager and pager.total_pages > 1 %}
+<div class="pagination">
+  {% if pager.has_prev %}
+    <a href="?page={{ pager.prev_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}">Prev</a>
+  {% else %}
+    <span>Prev</span>
+  {% endif %}
+  <span class="current">Page {{ pager.page }} / {{ pager.total_pages }}</span>
+  {% if pager.has_next %}
+    <a href="?page={{ pager.next_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

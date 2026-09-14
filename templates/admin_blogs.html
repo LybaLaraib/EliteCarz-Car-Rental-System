@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{# Admin page for creating, editing, and deleting blog posts. #}
+{% block content %}
+<h2>Blog Management</h2>
+<form class="card search-row" method="GET">
+  <label for="adminBlogSearch">Search blogs</label>
+  <input id="adminBlogSearch" name="q" placeholder="Search blog title/content" value="{{ q or '' }}">
+  <button class="btn">Search</button>
+  <a class="btn btn-secondary" href="/admin/blogs">Reset</a>
+</form>
+<section class="card form-card">
+  <form method="POST">
+    {% if edit_post %}
+      <input type="hidden" name="mode" value="update">
+      <input type="hidden" name="post_id" value="{{ edit_post._id }}">
+    {% else %}
+      <input type="hidden" name="mode" value="add">
+    {% endif %}
+    <label for="blogTitleInput">Post title</label>
+    <input id="blogTitleInput" name="title" placeholder="Post title" required value="{{ edit_post.title if edit_post else '' }}">
+    <label for="blogContentInput">Post content</label>
+    <textarea id="blogContentInput" name="content" placeholder="Post content" required>{{ edit_post.content if edit_post else '' }}</textarea>
+    <div class="action-bar">
+      <button class="btn">{% if edit_post %}Update{% else %}Publish{% endif %}</button>
+      {% if edit_post %}
+        <a class="btn btn-secondary" href="/admin/blogs">Cancel</a>
+      {% endif %}
+    </div>
+  </form>
+</section>
+<div class="grid two">
+{% for post in posts %}
+  <article class="card">
+    <h3>{{ post.title }}</h3>
+    {% if post.created_at %}
+      <p style="margin:0 0 8px; color:rgba(148,163,184,.95); font-size:13px;">
+        Published: {{ post.created_at.strftime('%Y-%m-%d') if post.created_at.strftime else post.created_at }}
+      </p>
+    {% endif %}
+    <p>{{ post.content }}</p>
+    <div class="action-bar">
+      <a class="btn btn-secondary" href="/admin/blogs?edit_id={{ post._id }}">Update</a>
+      <form method="POST" action="/admin/blogs/delete/{{ post._id }}">
+        <button class="btn btn-dark">Delete</button>
+      </form>
+    </div>
+  </article>
+{% endfor %}
+</div>
+{% endblock %}

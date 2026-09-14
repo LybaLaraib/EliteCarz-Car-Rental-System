@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{# Public policies page for privacy, terms, and refunds. #}
+{% block content %}
+<section class="hero">
+  <h2 style="margin:0;">Policies</h2>
+  <p style="margin:8px 0 0; color: rgba(148,163,184,.95);">
+    Privacy, terms, and refunds — all in one place.
+  </p>
+</section>
+
+<section class="grid two">
+  <article class="card" id="privacy">
+    <h3 style="margin-top:0;">Privacy Policy</h3>
+    <p style="color:rgba(148,163,184,.95);">
+      We collect only what’s needed to operate EliteCarz: account details, booking information, and payment records.
+      We do not sell personal data. Access is limited to authorized staff for support and operations.
+    </p>
+    <ul style="margin:0; color:rgba(226,232,240,.92);">
+      <li>Data used for bookings, support, and security.</li>
+      <li>Basic logs may be stored for fraud prevention and auditing.</li>
+      <li>You can request account data correction by contacting support.</li>
+    </ul>
+  </article>
+
+  <article class="card" id="terms">
+    <h3 style="margin-top:0;">Terms & Conditions</h3>
+    <p style="color:rgba(148,163,184,.95);">
+      By using EliteCarz, you agree to provide accurate information, follow booking rules, and respect pickup/return timings.
+      Admin actions are logged for safety and integrity of operations.
+    </p>
+    <ul style="margin:0; color:rgba(226,232,240,.92);">
+      <li>Bookings may auto-cancel if not completed within the stated window.</li>
+      <li>Availability depends on date overlap and confirmation status.</li>
+      <li>Misuse, fraud, or abusive behavior may result in account restriction.</li>
+    </ul>
+  </article>
+
+  <article class="card" id="refunds" style="grid-column:1/-1;">
+    <h3 style="margin-top:0;">Refund Policy</h3>
+    <p style="color:rgba(148,163,184,.95); margin:0 0 10px;">
+      Refunds depend on booking status and timing. If a booking is cancelled by the system or marked cancelled by support,
+      the related payment record will be reviewed.
+    </p>
+    <ul style="margin:0; color:rgba(226,232,240,.92);">
+      <li>Pending payments generally do not require refunds.</li>
+      <li>Paid bookings may be eligible based on cancellation reason and policy window.</li>
+      <li>For disputes, contact support with your booking ID.</li>
+    </ul>
+  </article>
+</section>
+{% endblock %}

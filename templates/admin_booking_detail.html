@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero hero-admin">
+  <div class="badge">{{ booking.booking_uid or booking._id }}</div>
+  <h2 style="margin:10px 0 6px;">Booking Details</h2>
+  <p style="margin:0; color:rgba(148,163,184,.95);">Status: <span class="status-pill status-{{ booking.status }}">{{ booking._status_label }}</span></p>
+  <div class="hero-actions booking-detail-actions">
+    <a class="btn btn-secondary" href="/admin/bookings">Back to Bookings</a>
+    {% if booking.status in ['pending', 'confirmed'] %}
+      <form method="POST" action="/admin/bookings/{{ booking._id }}/complete">
+        <input type="hidden" name="next" value="detail">
+        <button class="btn">Mark as Completed</button>
+      </form>
+      <form method="POST" action="/admin/bookings/{{ booking._id }}/cancel">
+        <input type="hidden" name="next" value="detail">
+        <button class="btn btn-dark">Cancel Booking</button>
+      </form>
+    {% endif %}
+  </div>
+</section>
+
+<section class="booking-detail-layout">
+  <div>
+    {% if booking._car %}
+      <img class="detail-car-img" src="{{ booking._car.image_url }}" alt="{{ booking._car.brand }} {{ booking._car.model }}" loading="lazy">
+    {% endif %}
+  </div>
+  <div class="detail-panel">
+    <h3>Booking</h3>
+    <dl class="detail-list inline">
+      <div><dt>Booking ID:</dt><dd>{{ booking._id }}</dd></div>
+      <div><dt>Display ID:</dt><dd>{{ booking.booking_uid or '-' }}</dd></div>
+      <div><dt>Created:</dt><dd>{{ booking.created_at.strftime('%Y-%m-%d %H:%M') if booking.created_at and booking.created_at.strftime else booking.created_at }}</dd></div>
+      <div><dt>Dates:</dt><dd>{{ booking.start_date }} to {{ booking.end_date }}</dd></div>
+      <div><dt>Total Days:</dt><dd>{{ booking.total_days or '-' }}</dd></div>
+      <div><dt>Total Price:</dt><dd>PKR {{ booking.total_price }}</dd></div>
+      <div><dt>Pickup City:</dt><dd>{{ booking.pickup_city or '-' }}</dd></div>
+      <div><dt>Payment Status:</dt><dd>{{ booking.payment_status or (booking._payment.status if booking._payment else '-') }}</dd></div>
+      <div><dt>Expires At:</dt><dd>{{ booking.expires_at.strftime('%Y-%m-%d %H:%M') if booking.expires_at and booking.expires_at.strftime else booking.expires_at or '-' }}</dd></div>
+      {% if booking.cancel_reason %}
+        <div><dt>Cancel Reason:</dt><dd>{{ booking.cancel_reason }}</dd></div>
+      {% endif %}
+    </dl>
+  </div>
+</section>
+
+<section class="grid three" style="margin-top:16px;">
+  <article class="card">
+    <h3 style="margin-top:0;">Client</h3>
+    <dl class="detail-list compact inline">
+      <div><dt>Name:</dt><dd>{{ booking.customer_name or (booking._user.name if booking._user else '-') }}</dd></div>
+      <div><dt>User ID:</dt><dd>{{ booking.user_id }}</dd></div>
+      <div><dt>Username:</dt><dd>{{ booking._user.username if booking._user else '-' }}</dd></div>
+      <div><dt>Email:</dt><dd>{{ booking._user.email if booking._user else '-' }}</dd></div>
+      <div><dt>Phone:</dt><dd>{{ booking.customer_phone or (booking._user.phone if booking._user else '-') }}</dd></div>
+      <div><dt>Address:</dt><dd>{{ booking.customer_address or (booking._user.address if booking._user else '-') }}</dd></div>
+    </dl>
+  </article>
+  <article class="card">
+    <h3 style="margin-top:0;">Car</h3>
+    <dl class="detail-list compact inline">
+      <div><dt>Car ID:</dt><dd>{{ booking.car_id }}</dd></div>
+      <div><dt>Name:</dt><dd>{% if booking._car %}{{ booking._car.brand }} {{ booking._car.model }}{% else %}-{% endif %}</dd></div>
+      <div><dt>Year:</dt><dd>{{ booking._car.year if booking._car else '-' }}</dd></div>
+      <div><dt>Category:</dt><dd>{{ booking._car.category if booking._car else '-' }}</dd></div>
+      <div><dt>City:</dt><dd>{{ booking._car.city if booking._car else '-' }}</dd></div>
+      <div><dt>Rent/Day:</dt><dd>PKR {{ booking._car.price_per_day if booking._car else '-' }}</dd></div>
+    </dl>
+  </article>
+  <article class="card">
+    <h3 style="margin-top:0;">Card & Payment</h3>
+    {% set card = booking.card_details or (booking._payment.card_details if booking._payment else {}) or {} %}
+    <dl class="detail-list compact inline">
+      <div><dt>Payment ID:</dt><dd>{{ booking._payment._id if booking._payment else '-' }}</dd></div>
+      <div><dt>Method:</dt><dd>{{ booking._payment.method if booking._payment else 'card' }}</dd></div>
+      <div><dt>Amount:</dt><dd>PKR {{ booking._payment.amount if booking._payment else booking.total_price }}</dd></div>
+      <div><dt>Cardholder:</dt><dd>{{ card.cardholder or '-' }}</dd></div>
+      <div><dt>Card:</dt><dd>{{ card.masked_number or '-' }}</dd></div>
+      <div><dt>Expiry:</dt><dd>{{ card.expiry or '-' }}</dd></div>
+      <div><dt>CVV:</dt><dd>Not stored for security</dd></div>
+    </dl>
+  </article>
+</section>
+{% endblock %}

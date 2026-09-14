@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{# Admin page for reviewing, replying to, and resolving contact queries. #}
+{% block content %}
+<h2>Contact Queries</h2>
+<form class="card search-row" method="GET">
+  <input name="q" placeholder="Search name/email/message" value="{{ q or '' }}">
+  <select name="status">
+    <option value="">All</option>
+    <option value="new" {% if status=='new' %}selected{% endif %}>New</option>
+    <option value="resolved" {% if status=='resolved' %}selected{% endif %}>Resolved</option>
+  </select>
+  <button class="btn">Filter</button>
+  <a class="btn btn-secondary" href="/admin/queries">Reset</a>
+</form>
+<div class="grid two">
+{% for q in queries %}
+  <article class="card">
+    <h3>{{ q.name }} ({{ q.email }})</h3>
+    <p style="color:rgba(148,163,184,.95); margin:0 0 10px;">Status: <b>{% if q.status %}{{ q.status }}{% else %}new{% endif %}</b></p>
+    <details>
+      <summary style="cursor:pointer;">Show details</summary>
+      <p style="margin-top:10px;">{{ q.message }}</p>
+      {% if q.admin_reply %}
+        <p style="margin:10px 0 0; color:rgba(148,163,184,.95);"><b>Reply saved:</b> {{ q.admin_reply }}</p>
+      {% endif %}
+    </details>
+    <div class="action-bar" style="margin-top:12px;">
+      <form method="POST" action="/admin/queries/reply/{{ q._id }}" style="flex:1; min-width:240px;">
+        <input name="reply" placeholder="Type reply to save (you can also email user separately)" value="">
+        <button class="btn btn-secondary">Reply</button>
+      </form>
+      <form method="POST" action="/admin/queries/resolve/{{ q._id }}">
+        {% if q.status == 'resolved' %}
+          <button class="btn" disabled>Resolved</button>
+        {% else %}
+          <button class="btn">Mark Resolved</button>
+        {% endif %}
+      </form>
+    </div>
+  </article>
+{% else %}
+  <p>No queries found.</p>
+{% endfor %}
+</div>
+
+{% if pager and pager.total_pages > 1 %}
+<div class="pagination">
+  {% if pager.has_prev %}
+    <a href="?page={{ pager.prev_page }}&per_page={{ pager.per_page }}&q={{ q }}&status={{ status }}">Prev</a>
+  {% else %}
+    <span>Prev</span>
+  {% endif %}
+  <span class="current">Page {{ pager.page }} / {{ pager.total_pages }}</span>
+  {% if pager.has_next %}
+    <a href="?page={{ pager.next_page }}&per_page={{ pager.per_page }}&q={{ q }}&status={{ status }}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

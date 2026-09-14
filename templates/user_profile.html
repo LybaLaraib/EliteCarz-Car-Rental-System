@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{# User profile and password update forms. #}
+{% block content %}
+<section class="hero hero-user">
+  <h2 style="margin:0;">My Profile</h2>
+  <p style="margin:8px 0 0; color: rgba(148,163,184,.95);">View and update your details. For security, changes require your old password.</p>
+</section>
+
+<div class="grid two">
+  <section class="card">
+    <h3 style="margin-top:0;">Profile details</h3>
+    <form method="POST">
+      <input type="hidden" name="action" value="update_profile">
+      <label class="field">
+        <span class="field-label">Full name</span>
+        <input name="name" value="{{ user.name or '' }}" required>
+      </label>
+      <label class="field">
+        <span class="field-label">Username</span>
+        <input name="username" value="{{ user.username or '' }}" required>
+      </label>
+      <label class="field">
+        <span class="field-label">Contact</span>
+        <input name="phone" value="{{ user.phone or '' }}" placeholder="Phone number">
+      </label>
+      <label class="field">
+        <span class="field-label">Address</span>
+        <input name="address" value="{{ user.address or '' }}" placeholder="Address">
+      </label>
+      <div class="divider"></div>
+      <label class="field">
+        <span class="field-label">Old password (required)</span>
+        <div class="password-wrap">
+          <input id="oldPass1" name="old_password" type="password" placeholder="Old password" required>
+          <button type="button" class="tiny-btn" onclick="togglePassword('oldPass1')">Show</button>
+        </div>
+      </label>
+      <button class="btn">Save changes</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">Change password</h3>
+    <form method="POST">
+      <input type="hidden" name="action" value="change_password">
+      <label class="field">
+        <span class="field-label">New password</span>
+        <div class="password-wrap">
+          <input id="newPass" name="new_password" type="password" placeholder="New password" required>
+          <button type="button" class="tiny-btn" onclick="togglePassword('newPass')">Show</button>
+        </div>
+      </label>
+      <label class="field">
+        <span class="field-label">Confirm new password</span>
+        <div class="password-wrap">
+          <input id="newPass2" name="confirm_password" type="password" placeholder="Confirm new password" required>
+          <button type="button" class="tiny-btn" onclick="togglePassword('newPass2')">Show</button>
+        </div>
+      </label>
+      <div class="divider"></div>
+      <label class="field">
+        <span class="field-label">Old password (required)</span>
+        <div class="password-wrap">
+          <input id="oldPass2" name="old_password" type="password" placeholder="Old password" required>
+          <button type="button" class="tiny-btn" onclick="togglePassword('oldPass2')">Show</button>
+        </div>
+      </label>
+      <button class="btn">Update password</button>
+    </form>
+    <p style="margin:12px 0 0; color: rgba(148,163,184,.95); font-size: 13px;">
+      Tip: use at least 8 characters with a mix of letters and numbers.
+    </p>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero hero-admin">
+  <div class="badge">Operations</div>
+  <h2 style="margin:10px 0 6px;">Manage Bookings</h2>
+  <p style="margin:0; color:rgba(148,163,184,.95); max-width:78ch;">
+    Review every booking by date, inspect customer and car details, and move pending reservations to completed or cancelled.
+  </p>
+</section>
+
+<form class="card search-row" method="GET">
+  <input type="hidden" name="tab" value="{{ tab }}">
+  <input name="q" placeholder="Search booking id, client, car id, car name, city, status" value="{{ q or '' }}">
+  <button class="btn">Search</button>
+  <a class="btn btn-secondary" href="/admin/bookings?tab={{ tab }}">Reset Filter</a>
+</form>
+
+<nav class="booking-tabs">
+  <a class="booking-tab {% if tab == 'all' %}active{% endif %}" href="/admin/bookings?tab=all&q={{ q|urlencode }}">All bookings <span>{{ tab_counts.all }}</span></a>
+  <a class="booking-tab {% if tab == 'pending' %}active{% endif %}" href="/admin/bookings?tab=pending&q={{ q|urlencode }}">Pending <span>{{ tab_counts.pending }}</span></a>
+  <a class="booking-tab {% if tab == 'cancelled' %}active{% endif %}" href="/admin/bookings?tab=cancelled&q={{ q|urlencode }}">Cancelled <span>{{ tab_counts.cancelled }}</span></a>
+  <a class="booking-tab {% if tab == 'completed' %}active{% endif %}" href="/admin/bookings?tab=completed&q={{ q|urlencode }}">Completed <span>{{ tab_counts.completed }}</span></a>
+</nav>
+
+<div class="booking-grid">
+{% for b in bookings %}
+  <article class="booking-card">
+    {% if b._car %}
+      <img src="{{ b._car.image_url }}" alt="{{ b._car.brand }} {{ b._car.model }}" loading="lazy">
+    {% endif %}
+    <div class="pad">
+      <div class="booking-head">
+        <div>
+          <h3>{{ b.booking_uid or b._id }}</h3>
+          <p>{{ b._id }} · {{ b.created_at.strftime('%Y-%m-%d %H:%M') if b.created_at and b.created_at.strftime else b.created_at }}</p>
+        </div>
+        <span class="status-pill status-{{ b.status }}">{{ b._status_label }}</span>
+      </div>
+      <div class="booking-meta">
+        <p><b>Car:</b> {{ b.car_id }}{% if b._car %} · {{ b._car.brand }} {{ b._car.model }}{% endif %}</p>
+        <p><b>Client:</b> {{ b.customer_name or (b._user.name if b._user else b.user_id) }}</p>
+        <p><b>City:</b> {{ b.pickup_city or (b._car.city if b._car else '-') }}</p>
+        <p><b>Total:</b> PKR {{ b.total_price }}</p>
+      </div>
+      <div class="booking-actions">
+        <a class="btn btn-secondary" href="/admin/bookings/{{ b._id }}">View Details</a>
+        {% if b.status in ['pending', 'confirmed'] %}
+          <form method="POST" action="/admin/bookings/{{ b._id }}/complete">
+            <input type="hidden" name="tab" value="{{ tab }}">
+            <input type="hidden" name="q" value="{{ q or '' }}">
+            <input type="hidden" name="page" value="{{ pager.page }}">
+            <button class="btn">Mark Completed</button>
+          </form>
+          <form method="POST" action="/admin/bookings/{{ b._id }}/cancel">
+            <input type="hidden" name="tab" value="{{ tab }}">
+            <input type="hidden" name="q" value="{{ q or '' }}">
+            <input type="hidden" name="page" value="{{ pager.page }}">
+            <button class="btn btn-dark">Cancel Booking</button>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+{% else %}
+  <p>No bookings found.</p>
+{% endfor %}
+</div>
+
+{% if pager and pager.total_pages > 1 %}
+<div class="pagination">
+  {% if pager.has_prev %}
+    <a href="?tab={{ tab }}&page={{ pager.prev_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}">Prev</a>
+  {% else %}
+    <span>Prev</span>
+  {% endif %}
+  <span class="current">Page {{ pager.page }} / {{ pager.total_pages }}</span>
+  {% if pager.has_next %}
+    <a href="?tab={{ tab }}&page={{ pager.next_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

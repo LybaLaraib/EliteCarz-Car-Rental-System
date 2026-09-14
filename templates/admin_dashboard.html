@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{# Admin overview with revenue, city, status, and chart summaries. #}
+{% block content %}
+<section class="hero hero-admin video-hero" style="min-height: 460px; display:flex; align-items:flex-end;">
+  <video autoplay muted loop playsinline preload="none" data-stream-src="/static/videos/admin-dashboard-video.mp4"></video>
+  <div class="overlay" style="width:100%;">
+    <div style="display:flex; gap:14px; align-items:flex-end; justify-content:space-between; flex-wrap:wrap;">
+      <div>
+        <div class="badge">EliteCarz Admin</div>
+        <h2 style="margin:10px 0 6px; font-size:40px;">Control the fleet. Grow revenue.</h2>
+        <p style="margin:0; color:rgba(226,232,240,.92); max-width:72ch;">
+          A streamlined dashboard for operations, insights, and performance — built for quick decisions.
+        </p>
+      </div>
+      <div class="action-bar">
+        <a class="btn" href="/admin/cars">Manage Cars</a>
+        <a class="btn btn-secondary" href="/admin/bookings">Manage Bookings</a>
+        <a class="btn btn-secondary" href="/admin/revenue">View Revenue</a>
+        <a class="btn btn-dark" href="/admin/queries">Open Queries</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="grid three" style="margin-top:14px;">
+  <div class="card">
+    <h3 style="margin-top:0;">Total Revenue</h3>
+    <p style="font-size:26px; margin:8px 0 0;"><b>PKR {{ revenue }}</b></p>
+    <p style="margin:10px 0 0; color:rgba(148,163,184,.95);">All-time payments (paid + pending).</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;">Cities Covered</h3>
+    <p style="font-size:26px; margin:8px 0 0;"><b>{{ cities|length }}</b></p>
+    <p style="margin:10px 0 0; color:rgba(148,163,184,.95);">Demand hotspots by pickup city.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;">Operational Mix</h3>
+    <p style="font-size:26px; margin:8px 0 0;"><b>{{ statuses|length }}</b></p>
+    <p style="margin:10px 0 0; color:rgba(148,163,184,.95);">Booking statuses and volume split.</p>
+  </div>
+</div>
+
+<section class="card" style="margin-top:16px; padding:14px;">
+  <h3 style="margin-top:0;">Analytics</h3>
+  <p style="margin:0 0 14px; color:rgba(148,163,184,.95);">Scroll-friendly charts with readable labels and clean styling.</p>
+  <div class="grid two">
+    <div class="card">
+      <h3 style="margin-top:0;">Bookings by City</h3>
+      <canvas class="chart-canvas" id="cityChart"></canvas>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;">Bookings by Status</h3>
+      <canvas class="chart-canvas" id="statusChart"></canvas>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px;">
+    <h3 style="margin-top:0;">Monthly Revenue Trend</h3>
+    <canvas class="chart-canvas tall" id="revChart"></canvas>
+  </div>
+</section>
+
+<script>
+const cityLabels = [{% for c in cities %}"{{ (c._id or 'Unknown')|replace('\"','\\\"') }}",{% endfor %}];
+const cityValues = [{% for c in cities %}{{ c.total }},{% endfor %}];
+const statusLabels = [{% for s in statuses %}"{{ (s._id or 'unknown')|replace('\"','\\\"') }}",{% endfor %}];
+const statusValues = [{% for s in statuses %}{{ s.total }},{% endfor %}];
+const revLabels = [{% for m in monthly %}"{{ m._id }}",{% endfor %}];
+const revValues = [{% for m in monthly %}{{ m.total }},{% endfor %}];
+
+const baseGrid = { color: "rgba(148,163,184,.22)" };
+const baseTicks = { color: "rgba(226,232,240,.85)" };
+
+new Chart(document.getElementById("cityChart"), {
+  type: "bar",
+  data: { labels: cityLabels, datasets: [{ label: "Bookings", data: cityValues, backgroundColor: "rgba(56,189,248,.45)", borderColor: "rgba(56,189,248,.9)", borderWidth: 1, borderRadius: 8 }] },
+  options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ labels:{ color:"rgba(226,232,240,.9)" } } }, scales:{ x:{ ticks: baseTicks, grid: { display:false } }, y:{ ticks: baseTicks, grid: baseGrid } } }
+});
+new Chart(document.getElementById("statusChart"), {
+  type: "doughnut",
+  data: { labels: statusLabels, datasets: [{ data: statusValues, backgroundColor: ["rgba(56,189,248,.6)","rgba(167,139,250,.6)","rgba(245,158,11,.6)","rgba(34,197,94,.55)","rgba(239,68,68,.55)"], borderColor:"rgba(2,6,23,.5)" }] },
+  options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:"bottom", labels:{ color:"rgba(226,232,240,.9)" } } } }
+});
+new Chart(document.getElementById("revChart"), {
+  type: "line",
+  data: {
+    labels: revLabels,
+    datasets: [
+      {
+        type: "bar",
+        label: "Monthly Revenue",
+        data: revValues,
+        backgroundColor: "rgba(56,189,248,.22)",
+        borderColor: "rgba(56,189,248,.65)",
+        borderWidth: 1,
+        borderRadius: 8,
+        barThickness: 18
+      },
+      {
+        type: "line",
+        label: "Revenue Trend",
+        data: revValues,
+        borderColor: "rgba(167,139,250,.95)",
+        backgroundColor: "rgba(167,139,250,.22)",
+        tension: .35,
+        fill: true,
+        pointRadius: 3,
+        pointHoverRadius: 6,
+        pointBackgroundColor: "rgba(226,232,240,.95)",
+        pointBorderColor: "rgba(167,139,250,1)",
+        pointBorderWidth: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: "index", intersect: false },
+    animation: {
+      duration: 1200,
+      easing: "easeOutQuart"
+    },
+    plugins: {
+      legend: { labels: { color: "rgba(226,232,240,.9)" } },
+      tooltip: {
+        backgroundColor: "rgba(2,6,23,.9)",
+        borderColor: "rgba(148,163,184,.25)",
+        borderWidth: 1,
+        titleColor: "#e2e8f0",
+        bodyColor: "#e2e8f0",
+        callbacks: {
+          label: function(ctx) {
+            const v = Number(ctx.raw || 0).toLocaleString();
+            return `${ctx.dataset.label}: PKR ${v}`;
+          }
+        }
+      }
+    },
+    scales: {
+      x: { ticks: baseTicks, grid: { display: false } },
+      y: {
+        ticks: {
+          color: "rgba(226,232,240,.85)",
+          callback: function(value) {
+            return "PKR " + Number(value).toLocaleString();
+          }
+        },
+        grid: baseGrid
+      }
+    }
+  }
+});
+</script>
+{% endblock %}

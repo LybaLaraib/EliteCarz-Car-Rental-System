@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{# Public contact form saved for admin review. #}
+{% block content %}
+<section class="card form-card">
+  <h2>Contact Us</h2>
+  <form method="POST">
+    <input name="name" placeholder="Your Name" required>
+    <input name="email" type="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Your query" required></textarea>
+    <button class="btn">Submit Query</button>
+  </form>
+</section>
+{% endblock %}

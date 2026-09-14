@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{# Booking form shown after a user selects a car. #}
+{% block content %}
+<section class="card form-card">
+  <img class="card-img" src="{{ car.image_url }}" alt="{{ car.brand }} {{ car.model }}" loading="lazy">
+  <h2>Book {{ car.brand }} {{ car.model }}</h2>
+  <p>City: {{ car.city }} | Rent/day: PKR {{ car.price_per_day }}</p>
+  <form method="POST">
+    <label>Start Date</label>
+    <input type="date" name="start_date" required>
+    <label>End Date</label>
+    <input type="date" name="end_date" required>
+    <label>Name</label>
+    <input name="name" required>
+    <label>Phone Number</label>
+    <input name="phone" required>
+    <label>Address</label>
+    <input name="address" required>
+    <div class="divider"></div>
+    <h3 style="margin:4px 0 10px;">Payment Mode</h3>
+    <label class="check-row">
+      <input type="radio" name="payment_method" value="cash" checked>
+      <span>Pay Cash</span>
+    </label>
+    <label class="check-row">
+      <input type="radio" name="payment_method" value="online">
+      <span>Pay Online</span>
+    </label>
+    <h3 style="margin:14px 0 10px;">Card Details <span style="color:rgba(148,163,184,.95); font-size:13px;">(optional)</span></h3>
+    <label>Cardholder Name</label>
+    <input name="card_name" autocomplete="cc-name">
+    <label>Card Number</label>
+    <input name="card_number" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456">
+    <div class="grid two">
+      <label class="field">
+        <span class="field-label">Expiry</span>
+        <input name="card_expiry" autocomplete="cc-exp" placeholder="MM/YY">
+      </label>
+      <label class="field">
+        <span class="field-label">CVV</span>
+        <input name="card_cvv" type="password" inputmode="numeric" autocomplete="cc-csc">
+      </label>
+    </div>
+    <button class="btn" type="submit">Confirm Booking</button>
+  </form>
+</section>
+{% endblock %}

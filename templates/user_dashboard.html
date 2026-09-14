@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{# User dashboard with booking counts and quick actions. #}
+{% block content %}
+<section class="hero hero-admin video-hero" style="min-height: 420px; display:flex; align-items:flex-end;">
+  <video autoplay muted loop playsinline preload="none" poster="/static/images/opening-login-window-picture.jpg" data-stream-src="/static/videos/user-panel-video.mp4"></video>
+  <div class="overlay" style="width:100%;">
+    <div style="display:flex; gap:14px; align-items:flex-end; justify-content:space-between; flex-wrap:wrap;">
+      <div>
+        <div class="badge">My Panel</div>
+        <h2 style="margin:10px 0 6px; font-size:40px;">Plan, book, and manage your rides.</h2>
+        <p style="margin:0; color:rgba(226,232,240,.92); max-width:72ch;">
+          Track bookings, manage reviews, and keep your profile up to date — all in one place.
+        </p>
+      </div>
+      <div class="action-bar">
+        <a class="btn" href="/cars">Browse Cars</a>
+        <a class="btn btn-secondary" href="/my-bookings">My Bookings</a>
+        <a class="btn btn-dark" href="/profile">My Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="grid three">
+  <div class="card"><h3>My Bookings</h3><p>{{ bookings_count }}</p></div>
+  <div class="card"><h3>My Reviews</h3><p>{{ reviews_count }}</p></div>
+  <div class="card">
+    <h3>Quick Actions</h3>
+    <p style="color:rgba(148,163,184,.95); margin:0 0 12px;">Book a new ride, or improve your profile for faster bookings.</p>
+    <div class="action-bar">
+      <a class="btn" href="/cars">Book a Car</a>
+      <a class="btn btn-secondary" href="/blog">Trip Tips</a>
+    </div>
+  </div>
+</div>
+
+<section class="grid two" style="margin-top:16px;">
+  <div class="card">
+    <h3 style="margin-top:0;">Today’s checklist</h3>
+    <ul style="margin:0; padding-left:18px; color:rgba(148,163,184,.95); line-height:1.65;">
+      <li>Confirm dates and pickup city before booking</li>
+      <li>Keep your contact and address updated</li>
+      <li>Do a 2‑minute walk-around check at pickup</li>
+      <li>Save receipts/photos for a smooth refund process</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;">Recommended next steps</h3>
+    <p style="margin:0; color:rgba(148,163,184,.95);">
+      If you’re planning a weekend trip, book early for better availability. For city driving, prioritize compact size and fuel economy.
+      For highways, choose comfort and stability with enough luggage space.
+    </p>
+    <div class="action-bar" style="margin-top:14px;">
+      <a class="btn btn-secondary" href="/cars?q=suv">Search SUVs</a>
+      <a class="btn btn-secondary" href="/cars?q=sedan">Search Sedans</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

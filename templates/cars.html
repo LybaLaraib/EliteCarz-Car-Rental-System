@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{# Public car listing with search, city filter, and pagination. #}
+{% block content %}
+<h2>All Cars</h2>
+<form class="card search-row" method="GET">
+  <input name="q" placeholder="Search by ID, brand, model, city, category (SUV/Sedan)" value="{{ q or '' }}">
+  <input name="city" placeholder="City filter" value="{{ selected_city or '' }}">
+  <button class="btn">Apply</button>
+  <a class="btn btn-secondary" href="/cars">Reset</a>
+</form>
+<div class="cards">
+{% for car in cars %}
+  <article class="car-card">
+    <img src="{{ car.image_url }}" alt="{{ car.brand }} {{ car.model }}" onerror="this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80'">
+    <div class="pad">
+      <h3>{{ car.brand }} {{ car.model }}</h3>
+      <p>{{ car.city }} | {{ car.year }} | {{ car.category }}</p>
+      <p>Rent/day: PKR {{ car.price_per_day }}</p>
+      <p>{{ "★" * (car.rating_avg|round(0, 'floor')|int) }}{{ "☆" * (5 - (car.rating_avg|round(0, 'floor')|int)) }} ({{ car.rating_avg }})</p>
+      <a class="btn" href="/cars/{{ car._id }}">View Details</a>
+    </div>
+  </article>
+{% endfor %}
+</div>
+
+{% if pager and pager.total_pages > 1 %}
+<div class="pagination">
+  {% if pager.has_prev %}
+    <a href="?page={{ pager.prev_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}&city={{ selected_city|urlencode }}">Prev</a>
+  {% else %}
+    <span>Prev</span>
+  {% endif %}
+  <span class="current">Page {{ pager.page }} / {{ pager.total_pages }}</span>
+  {% if pager.has_next %}
+    <a href="?page={{ pager.next_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}&city={{ selected_city|urlencode }}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

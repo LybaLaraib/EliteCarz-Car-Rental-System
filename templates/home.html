@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{# Public home page with hero video and quick navigation blocks. #}
+{% block content %}
+<section class="hero hero-admin video-hero" style="min-height: 460px; display:flex; align-items:flex-end;">
+  <video autoplay muted loop playsinline preload="metadata" poster="/static/images/opening-login-window-picture.jpg" data-stream-src="/static/videos/home-hero-video.mp4"></video>
+  <div class="overlay" style="width:100%;">
+    <div style="display:flex; gap:14px; align-items:flex-end; justify-content:space-between; flex-wrap:wrap;">
+      <div>
+        <div class="badge">EliteCarz</div>
+        <h1 style="margin:10px 0 6px; font-size:42px;">Drive Elite. Rent Smart.</h1>
+        <p style="margin:0; color:rgba(226,232,240,.92); max-width:72ch;">
+          Modern car rentals for Lahore, Karachi, Islamabad, Faisalabad and Multan — with transparent pricing, verified cars, and a smooth booking flow.
+        </p>
+      </div>
+      <div class="action-bar">
+        <a class="btn" href="/cars">Browse Cars</a>
+        <a class="btn btn-secondary" href="/blog">Read Blog</a>
+        <a class="btn btn-dark" href="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="grid three" style="margin-top:14px;">
+  <div class="card">
+    <h3 style="margin-top:0;">Find your match</h3>
+    <p style="margin:0; color:rgba(148,163,184,.95);">Search by city, brand, model, and category — then compare rent/day instantly.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;">Trusted experience</h3>
+    <p style="margin:0; color:rgba(148,163,184,.95);">Verified fleet, clear policies, and simple pickup steps designed for students and families alike.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;">Smart planning</h3>
+    <p style="margin:0; color:rgba(148,163,184,.95);">Use the blog for practical tips: safety checks, fuel saving, and route planning.</p>
+  </div>
+</section>
+
+<section class="hero hero-public" style="margin-top:16px;">
+  <h2 style="margin:0;">Premium Fleet. Smooth Experience.</h2>
+  <p style="margin:8px 0 0;">Book your desired car in seconds with transparent pricing and clean UI — then manage everything from My Panel.</p>
+</section>
+
+<section class="grid three" style="margin-top:16px;">
+  <article class="card">
+    <h3 style="margin-top:0;">Quick category actions</h3>
+    <p style="margin:0 0 10px; color:rgba(148,163,184,.95);">Jump directly to the category you need right now.</p>
+    <div class="action-bar">
+      <a class="btn btn-secondary" href="/cars?q=suv">Browse SUVs</a>
+      <a class="btn btn-secondary" href="/cars?q=sedan">Browse Sedans</a>
+      <a class="btn btn-secondary" href="/cars?q=hatchback">Browse Hatchbacks</a>
+    </div>
+  </article>
+  <article class="card">
+    <h3 style="margin-top:0;">Plan by city</h3>
+    <p style="margin:0 0 10px; color:rgba(148,163,184,.95);">Find inventory in your preferred pickup location.</p>
+    <div class="action-bar">
+      <a class="btn btn-secondary" href="/cars?city=lahore">Lahore</a>
+      <a class="btn btn-secondary" href="/cars?city=karachi">Karachi</a>
+      <a class="btn btn-secondary" href="/cars?city=islamabad">Islamabad</a>
+    </div>
+  </article>
+  <article class="card">
+    <h3 style="margin-top:0;">Useful pages</h3>
+    <p style="margin:0 0 10px; color:rgba(148,163,184,.95);">Explore guidance before making a booking.</p>
+    <div class="action-bar">
+      <a class="btn btn-secondary" href="/blog">Read trip guides</a>
+      <a class="btn btn-secondary" href="/about">Learn about service</a>
+      <a class="btn btn-secondary" href="/policies">Review policies</a>
+    </div>
+  </article>
+</section>
+
+<section class="grid two" style="margin-top:16px;">
+  <article class="card">
+    <h3 style="margin-top:0;">Before-you-book checklist</h3>
+    <ul style="margin:0; padding-left:18px; color:rgba(148,163,184,.95); line-height:1.7;">
+      <li>Choose category based on route: city use vs highway distance</li>
+      <li>Compare per-day rate against expected trip length</li>
+      <li>Confirm pickup city and preferred dates first</li>
+      <li>Review ratings and features for comfort requirements</li>
+      <li>Keep profile details updated for faster checkout</li>
+    </ul>
+  </article>
+  <article class="card">
+    <h3 style="margin-top:0;">Common smart searches</h3>
+    <p style="margin:0 0 10px; color:rgba(148,163,184,.95);">Use these to quickly discover relevant results.</p>
+    <div class="action-bar">
+      <a class="btn btn-secondary" href="/cars?q=automatic">Automatic</a>
+      <a class="btn btn-secondary" href="/cars?q=toyota">Toyota</a>
+      <a class="btn btn-secondary" href="/cars?q=honda">Honda</a>
+      <a class="btn btn-secondary" href="/cars?q=family">Family trips</a>
+    </div>
+    <p style="margin:12px 0 0; color:rgba(148,163,184,.95); line-height:1.6;">
+      Filters are case-insensitive, so searching for <b>suv</b>, <b>SUV</b>, or <b>SuV</b> gives consistent results.
+    </p>
+  </article>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{# User About page; the main text is managed from the admin panel. #}
+{% block content %}
+{% set default_about = "EliteCarz is a car rental platform built to feel modern, clear, and reliable — focused on verified cars, transparent pricing, and an easy booking flow. Whether you’re commuting in the city or planning a highway trip, our goal is to make every step predictable: search, compare, book, and manage your rides from one panel." %}
+{% set about_text = about_content or default_about %}
+<section class="hero hero-public about-hero">
+  <h2 style="margin:0;">About EliteCarz</h2>
+  <div class="about-copy">
+    {% for line in about_text.splitlines() %}
+      {% if line.strip() %}
+        <div class="about-line">{{ line }}</div>
+      {% else %}
+        <div class="about-blank" aria-hidden="true"></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

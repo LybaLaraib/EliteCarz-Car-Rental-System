@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{# Public blog listing with modal view for full posts. #}
+{% block content %}
+<h2>EliteCarz Blog</h2>
+<form class="card search-row" method="GET">
+  <input name="q" placeholder="Search blog posts" value="{{ q or '' }}">
+  <button class="btn">Search</button>
+  <a class="btn btn-secondary" href="/blog">Reset</a>
+</form>
+<div class="grid two">
+{% for post in posts %}
+  <article class="card blog-card">
+    <h3>{{ post.title }}</h3>
+    {% if post.created_at %}
+      <p style="margin:0 0 8px; color:rgba(148,163,184,.95); font-size:13px;">
+        Published: {{ post.created_at.strftime('%Y-%m-%d') if post.created_at.strftime else post.created_at }}
+      </p>
+    {% endif %}
+    <p class="blog-excerpt">{{ (post.content or '')[:220] }}{% if (post.content or '')|length > 220 %}…{% endif %}</p>
+    <button
+      class="btn btn-secondary blog-open-btn"
+      type="button"
+      data-title="{{ post.title or '' }}"
+      data-content="{{ post.content or '' }}"
+    >
+      Show more
+    </button>
+  </article>
+{% endfor %}
+</div>
+
+{% if pager and pager.total_pages > 1 %}
+<div class="pagination">
+  {% if pager.has_prev %}
+    <a href="?page={{ pager.prev_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}">Prev</a>
+  {% else %}
+    <span>Prev</span>
+  {% endif %}
+  <span class="current">Page {{ pager.page }} / {{ pager.total_pages }}</span>
+  {% if pager.has_next %}
+    <a href="?page={{ pager.next_page }}&per_page={{ pager.per_page }}&q={{ q|urlencode }}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</div>
+{% endif %}
+
+<div id="blogModal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" onclick="closeBlogModal()"></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle">
+    <div class="modal-head">
+      <h3 id="blogModalTitle" style="margin:0;"></h3>
+      <button class="tiny-btn" type="button" onclick="closeBlogModal()">Close</button>
+    </div>
+    <div id="blogModalBody" class="modal-body"></div>
+  </div>
+</div>
+{% endblock %}

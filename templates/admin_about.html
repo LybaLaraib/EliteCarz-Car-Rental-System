@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{# Admin form for updating the public About page. #}
+{% block content %}
+<h2>Manage About</h2>
+<section class="card form-card">
+  <form method="POST">
+    <textarea name="content" placeholder="Write About content for user side..." required>{{ about_content }}</textarea>
+    <button class="btn">Update About Content</button>
+  </form>
+</section>
+{% endblock %}

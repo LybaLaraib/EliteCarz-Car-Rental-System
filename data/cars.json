@@ -1,0 +1,4402 @@
+[
+    {
+        "_id": "CAR001",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 7130,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076149"
+    },
+    {
+        "_id": "CAR002",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2024,
+        "category": "SUV",
+        "price_per_day": 14098,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076259"
+    },
+    {
+        "_id": "CAR003",
+        "brand": "Toyota",
+        "model": "Yaris",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 15031,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076280"
+    },
+    {
+        "_id": "CAR004",
+        "brand": "Toyota",
+        "model": "Land Cruiser",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 19818,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076298"
+    },
+    {
+        "_id": "CAR005",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 17053,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076313"
+    },
+    {
+        "_id": "CAR006",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 5545,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076329"
+    },
+    {
+        "_id": "CAR007",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 8806,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076348"
+    },
+    {
+        "_id": "CAR008",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 7609,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076426"
+    },
+    {
+        "_id": "CAR009",
+        "brand": "Toyota",
+        "model": "Land Cruiser",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 4492,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076450"
+    },
+    {
+        "_id": "CAR010",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 17037,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076468"
+    },
+    {
+        "_id": "CAR011",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 9001,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076484"
+    },
+    {
+        "_id": "CAR012",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 6030,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076503"
+    },
+    {
+        "_id": "CAR013",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2022,
+        "category": "SUV",
+        "price_per_day": 5129,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076519"
+    },
+    {
+        "_id": "CAR014",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 6000,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076533"
+    },
+    {
+        "_id": "CAR015",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 19756,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076757"
+    },
+    {
+        "_id": "CAR016",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 4541,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076778"
+    },
+    {
+        "_id": "CAR017",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 9808,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076797"
+    },
+    {
+        "_id": "CAR018",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 15629,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076813"
+    },
+    {
+        "_id": "CAR019",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 10421,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076833"
+    },
+    {
+        "_id": "CAR020",
+        "brand": "Honda",
+        "model": "BR-V",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 10003,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076849"
+    },
+    {
+        "_id": "CAR021",
+        "brand": "Honda",
+        "model": "BR-V",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 11826,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076869"
+    },
+    {
+        "_id": "CAR022",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 17945,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076885"
+    },
+    {
+        "_id": "CAR023",
+        "brand": "Toyota",
+        "model": "Yaris",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 19477,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076902"
+    },
+    {
+        "_id": "CAR024",
+        "brand": "Suzuki",
+        "model": "Cultus",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 5555,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076917"
+    },
+    {
+        "_id": "CAR025",
+        "brand": "Toyota",
+        "model": "Fortuner",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 12289,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076962"
+    },
+    {
+        "_id": "CAR026",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 3795,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.076986"
+    },
+    {
+        "_id": "CAR027",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 15199,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077003"
+    },
+    {
+        "_id": "CAR028",
+        "brand": "Suzuki",
+        "model": "Cultus",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 13529,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077020"
+    },
+    {
+        "_id": "CAR029",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 14483,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077036"
+    },
+    {
+        "_id": "CAR030",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 3777,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077052"
+    },
+    {
+        "_id": "CAR031",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 4944,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077069"
+    },
+    {
+        "_id": "CAR032",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2021,
+        "category": "SUV",
+        "price_per_day": 3116,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077087"
+    },
+    {
+        "_id": "CAR033",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 6603,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077107"
+    },
+    {
+        "_id": "CAR034",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 8527,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077124"
+    },
+    {
+        "_id": "CAR035",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 9753,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077140"
+    },
+    {
+        "_id": "CAR036",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2024,
+        "category": "Hatchback",
+        "price_per_day": 3927,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077162"
+    },
+    {
+        "_id": "CAR037",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 13788,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077181"
+    },
+    {
+        "_id": "CAR038",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 4575,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077198"
+    },
+    {
+        "_id": "CAR039",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 10909,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077218"
+    },
+    {
+        "_id": "CAR040",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2024,
+        "category": "Hatchback",
+        "price_per_day": 7445,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077234"
+    },
+    {
+        "_id": "CAR041",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 8013,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077250"
+    },
+    {
+        "_id": "CAR042",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 16536,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077266"
+    },
+    {
+        "_id": "CAR043",
+        "brand": "Toyota",
+        "model": "Prado",
+        "year": 2024,
+        "category": "Sedan",
+        "price_per_day": 3830,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077282"
+    },
+    {
+        "_id": "CAR044",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2021,
+        "category": "SUV",
+        "price_per_day": 13360,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077301"
+    },
+    {
+        "_id": "CAR045",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 3382,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077318"
+    },
+    {
+        "_id": "CAR046",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 18542,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077334"
+    },
+    {
+        "_id": "CAR047",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 3460,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077350"
+    },
+    {
+        "_id": "CAR048",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 12237,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077367"
+    },
+    {
+        "_id": "CAR049",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2024,
+        "category": "Hatchback",
+        "price_per_day": 19401,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077388"
+    },
+    {
+        "_id": "CAR050",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 16319,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077405"
+    },
+    {
+        "_id": "CAR051",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 17967,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077452"
+    },
+    {
+        "_id": "CAR052",
+        "brand": "Honda",
+        "model": "Civic",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 4841,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077493"
+    },
+    {
+        "_id": "CAR053",
+        "brand": "Toyota",
+        "model": "Land Cruiser",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 5749,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077516"
+    },
+    {
+        "_id": "CAR054",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 15598,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077535"
+    },
+    {
+        "_id": "CAR055",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 6151,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077553"
+    },
+    {
+        "_id": "CAR056",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2021,
+        "category": "SUV",
+        "price_per_day": 19521,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077570"
+    },
+    {
+        "_id": "CAR057",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 9741,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077590"
+    },
+    {
+        "_id": "CAR058",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 6027,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077607"
+    },
+    {
+        "_id": "CAR059",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 19138,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077627"
+    },
+    {
+        "_id": "CAR060",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 14837,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077644"
+    },
+    {
+        "_id": "CAR061",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 5059,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077659"
+    },
+    {
+        "_id": "CAR062",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 7189,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077675"
+    },
+    {
+        "_id": "CAR063",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 16775,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077691"
+    },
+    {
+        "_id": "CAR064",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 16626,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077708"
+    },
+    {
+        "_id": "CAR065",
+        "brand": "Honda",
+        "model": "BR-V",
+        "year": 2021,
+        "category": "Hatchback",
+        "price_per_day": 12939,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077724"
+    },
+    {
+        "_id": "CAR066",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 18734,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077746"
+    },
+    {
+        "_id": "CAR067",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 9573,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077764"
+    },
+    {
+        "_id": "CAR068",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 9692,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077781"
+    },
+    {
+        "_id": "CAR069",
+        "brand": "Toyota",
+        "model": "Yaris",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 11126,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077800"
+    },
+    {
+        "_id": "CAR070",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 5038,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077818"
+    },
+    {
+        "_id": "CAR071",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 10638,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077834"
+    },
+    {
+        "_id": "CAR072",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 15956,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077851"
+    },
+    {
+        "_id": "CAR073",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2024,
+        "category": "Sedan",
+        "price_per_day": 17724,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077868"
+    },
+    {
+        "_id": "CAR074",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 12653,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077885"
+    },
+    {
+        "_id": "CAR075",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2021,
+        "category": "Hatchback",
+        "price_per_day": 18543,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077903"
+    },
+    {
+        "_id": "CAR076",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 15118,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077921"
+    },
+    {
+        "_id": "CAR077",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 15020,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077938"
+    },
+    {
+        "_id": "CAR078",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 3009,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077957"
+    },
+    {
+        "_id": "CAR079",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 6626,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077979"
+    },
+    {
+        "_id": "CAR080",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 19954,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.077999"
+    },
+    {
+        "_id": "CAR081",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 3082,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078014"
+    },
+    {
+        "_id": "CAR082",
+        "brand": "Suzuki",
+        "model": "Cultus",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 19170,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078030"
+    },
+    {
+        "_id": "CAR083",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 12071,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078047"
+    },
+    {
+        "_id": "CAR084",
+        "brand": "Toyota",
+        "model": "Corolla",
+        "year": 2024,
+        "category": "Hatchback",
+        "price_per_day": 3984,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078066"
+    },
+    {
+        "_id": "CAR085",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 12913,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078085"
+    },
+    {
+        "_id": "CAR086",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 6277,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078101"
+    },
+    {
+        "_id": "CAR087",
+        "brand": "Toyota",
+        "model": "Prado",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 9854,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078118"
+    },
+    {
+        "_id": "CAR088",
+        "brand": "Toyota",
+        "model": "Prado",
+        "year": 2022,
+        "category": "SUV",
+        "price_per_day": 12630,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078135"
+    },
+    {
+        "_id": "CAR089",
+        "brand": "Toyota",
+        "model": "Land Cruiser",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 14579,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078195"
+    },
+    {
+        "_id": "CAR090",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 17399,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078219"
+    },
+    {
+        "_id": "CAR091",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 8841,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078299"
+    },
+    {
+        "_id": "CAR092",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 14980,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078325"
+    },
+    {
+        "_id": "CAR093",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 4729,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078341"
+    },
+    {
+        "_id": "CAR094",
+        "brand": "Honda",
+        "model": "BR-V",
+        "year": 2024,
+        "category": "Hatchback",
+        "price_per_day": 17695,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078364"
+    },
+    {
+        "_id": "CAR095",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 9447,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078381"
+    },
+    {
+        "_id": "CAR096",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 5671,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078727"
+    },
+    {
+        "_id": "CAR097",
+        "brand": "Toyota",
+        "model": "Fortuner",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 12143,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078757"
+    },
+    {
+        "_id": "CAR098",
+        "brand": "Suzuki",
+        "model": "Cultus",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 3321,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078773"
+    },
+    {
+        "_id": "CAR099",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 14373,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078796"
+    },
+    {
+        "_id": "CAR100",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2021,
+        "category": "SUV",
+        "price_per_day": 15738,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078815"
+    },
+    {
+        "_id": "CAR101",
+        "brand": "Honda",
+        "model": "Civic",
+        "year": 2021,
+        "category": "Hatchback",
+        "price_per_day": 8713,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078832"
+    },
+    {
+        "_id": "CAR102",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 12276,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078846"
+    },
+    {
+        "_id": "CAR103",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 14085,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078861"
+    },
+    {
+        "_id": "CAR104",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 15298,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078875"
+    },
+    {
+        "_id": "CAR105",
+        "brand": "Honda",
+        "model": "City",
+        "year": 2024,
+        "category": "Sedan",
+        "price_per_day": 12343,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078891"
+    },
+    {
+        "_id": "CAR106",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 16936,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078905"
+    },
+    {
+        "_id": "CAR107",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 13294,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078921"
+    },
+    {
+        "_id": "CAR108",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 15161,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078936"
+    },
+    {
+        "_id": "CAR109",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2018,
+        "category": "SUV",
+        "price_per_day": 3750,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078953"
+    },
+    {
+        "_id": "CAR110",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 11314,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.078975"
+    },
+    {
+        "_id": "CAR111",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 10964,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079023"
+    },
+    {
+        "_id": "CAR112",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 11238,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079043"
+    },
+    {
+        "_id": "CAR113",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2021,
+        "category": "SUV",
+        "price_per_day": 18121,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079059"
+    },
+    {
+        "_id": "CAR114",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 4099,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079074"
+    },
+    {
+        "_id": "CAR115",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 16870,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079090"
+    },
+    {
+        "_id": "CAR116",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 12693,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079107"
+    },
+    {
+        "_id": "CAR117",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2024,
+        "category": "SUV",
+        "price_per_day": 17430,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079256"
+    },
+    {
+        "_id": "CAR118",
+        "brand": "Honda",
+        "model": "City",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 8311,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079287"
+    },
+    {
+        "_id": "CAR119",
+        "brand": "Toyota",
+        "model": "Yaris",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 19563,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079315"
+    },
+    {
+        "_id": "CAR120",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2022,
+        "category": "SUV",
+        "price_per_day": 13039,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079331"
+    },
+    {
+        "_id": "CAR121",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 9890,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079350"
+    },
+    {
+        "_id": "CAR122",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2024,
+        "category": "SUV",
+        "price_per_day": 17307,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079366"
+    },
+    {
+        "_id": "CAR123",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 15531,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079382"
+    },
+    {
+        "_id": "CAR124",
+        "brand": "Toyota",
+        "model": "Corolla",
+        "year": 2024,
+        "category": "Sedan",
+        "price_per_day": 10019,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079400"
+    },
+    {
+        "_id": "CAR125",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2024,
+        "category": "SUV",
+        "price_per_day": 6633,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079417"
+    },
+    {
+        "_id": "CAR126",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2018,
+        "category": "SUV",
+        "price_per_day": 6572,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079434"
+    },
+    {
+        "_id": "CAR127",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 3269,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079450"
+    },
+    {
+        "_id": "CAR128",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 17032,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079648"
+    },
+    {
+        "_id": "CAR129",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 19452,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079928"
+    },
+    {
+        "_id": "CAR130",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 13451,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079954"
+    },
+    {
+        "_id": "CAR131",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2022,
+        "category": "SUV",
+        "price_per_day": 9663,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079972"
+    },
+    {
+        "_id": "CAR132",
+        "brand": "Toyota",
+        "model": "Fortuner",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 18255,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.079988"
+    },
+    {
+        "_id": "CAR133",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 16096,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080006"
+    },
+    {
+        "_id": "CAR134",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 11061,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080023"
+    },
+    {
+        "_id": "CAR135",
+        "brand": "Honda",
+        "model": "Civic",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 14925,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080043"
+    },
+    {
+        "_id": "CAR136",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 17250,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080060"
+    },
+    {
+        "_id": "CAR137",
+        "brand": "Toyota",
+        "model": "Fortuner",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 11608,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080079"
+    },
+    {
+        "_id": "CAR138",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 4915,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080095"
+    },
+    {
+        "_id": "CAR139",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 18092,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080115"
+    },
+    {
+        "_id": "CAR140",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2018,
+        "category": "SUV",
+        "price_per_day": 11945,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080131"
+    },
+    {
+        "_id": "CAR141",
+        "brand": "Toyota",
+        "model": "Prado",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 10051,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080148"
+    },
+    {
+        "_id": "CAR142",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 19346,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080167"
+    },
+    {
+        "_id": "CAR143",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2021,
+        "category": "Hatchback",
+        "price_per_day": 5270,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080183"
+    },
+    {
+        "_id": "CAR144",
+        "brand": "Suzuki",
+        "model": "Cultus",
+        "year": 2024,
+        "category": "Hatchback",
+        "price_per_day": 8525,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080200"
+    },
+    {
+        "_id": "CAR145",
+        "brand": "Toyota",
+        "model": "Fortuner",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 17547,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080216"
+    },
+    {
+        "_id": "CAR146",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 4469,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080233"
+    },
+    {
+        "_id": "CAR147",
+        "brand": "Honda",
+        "model": "BR-V",
+        "year": 2022,
+        "category": "SUV",
+        "price_per_day": 11186,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080249"
+    },
+    {
+        "_id": "CAR148",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 17616,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080269"
+    },
+    {
+        "_id": "CAR149",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 14888,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080290"
+    },
+    {
+        "_id": "CAR150",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 4124,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080311"
+    },
+    {
+        "_id": "CAR151",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 17920,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080327"
+    },
+    {
+        "_id": "CAR152",
+        "brand": "Toyota",
+        "model": "Fortuner",
+        "year": 2019,
+        "category": "SUV",
+        "price_per_day": 15357,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080343"
+    },
+    {
+        "_id": "CAR153",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 19729,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080360"
+    },
+    {
+        "_id": "CAR154",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 7441,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080378"
+    },
+    {
+        "_id": "CAR155",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2024,
+        "category": "Sedan",
+        "price_per_day": 5052,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080396"
+    },
+    {
+        "_id": "CAR156",
+        "brand": "Toyota",
+        "model": "Prado",
+        "year": 2022,
+        "category": "SUV",
+        "price_per_day": 11172,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080412"
+    },
+    {
+        "_id": "CAR157",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 3179,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080429"
+    },
+    {
+        "_id": "CAR158",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 12770,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080447"
+    },
+    {
+        "_id": "CAR159",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2018,
+        "category": "Hatchback",
+        "price_per_day": 4572,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080466"
+    },
+    {
+        "_id": "CAR160",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 10324,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080483"
+    },
+    {
+        "_id": "CAR161",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 16913,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080498"
+    },
+    {
+        "_id": "CAR162",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2019,
+        "category": "Sedan",
+        "price_per_day": 9106,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080516"
+    },
+    {
+        "_id": "CAR163",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 11254,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080533"
+    },
+    {
+        "_id": "CAR164",
+        "brand": "Toyota",
+        "model": "Prado",
+        "year": 2020,
+        "category": "Hatchback",
+        "price_per_day": 8165,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080551"
+    },
+    {
+        "_id": "CAR165",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 7345,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080568"
+    },
+    {
+        "_id": "CAR166",
+        "brand": "Honda",
+        "model": "Civic",
+        "year": 2018,
+        "category": "SUV",
+        "price_per_day": 5645,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080588"
+    },
+    {
+        "_id": "CAR167",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 3408,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080603"
+    },
+    {
+        "_id": "CAR168",
+        "brand": "Honda",
+        "model": "City",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 13545,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080619"
+    },
+    {
+        "_id": "CAR169",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2018,
+        "category": "SUV",
+        "price_per_day": 4073,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080637"
+    },
+    {
+        "_id": "CAR170",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 17089,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080654"
+    },
+    {
+        "_id": "CAR171",
+        "brand": "Nissan",
+        "model": "Dayz",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 17436,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080669"
+    },
+    {
+        "_id": "CAR172",
+        "brand": "Toyota",
+        "model": "Fortuner",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 12973,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080686"
+    },
+    {
+        "_id": "CAR173",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 15130,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080702"
+    },
+    {
+        "_id": "CAR174",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 8616,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080721"
+    },
+    {
+        "_id": "CAR175",
+        "brand": "Honda",
+        "model": "City",
+        "year": 2019,
+        "category": "Hatchback",
+        "price_per_day": 11185,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080738"
+    },
+    {
+        "_id": "CAR176",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2020,
+        "category": "SUV",
+        "price_per_day": 10129,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080754"
+    },
+    {
+        "_id": "CAR177",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 12401,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080771"
+    },
+    {
+        "_id": "CAR178",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 13781,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080788"
+    },
+    {
+        "_id": "CAR179",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2023,
+        "category": "Sedan",
+        "price_per_day": 8765,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080808"
+    },
+    {
+        "_id": "CAR180",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2023,
+        "category": "Hatchback",
+        "price_per_day": 13904,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080824"
+    },
+    {
+        "_id": "CAR181",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2022,
+        "category": "SUV",
+        "price_per_day": 12455,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080840"
+    },
+    {
+        "_id": "CAR182",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 3698,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080856"
+    },
+    {
+        "_id": "CAR183",
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2018,
+        "category": "SUV",
+        "price_per_day": 6380,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080871"
+    },
+    {
+        "_id": "CAR184",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2021,
+        "category": "Hatchback",
+        "price_per_day": 9139,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080888"
+    },
+    {
+        "_id": "CAR185",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2024,
+        "category": "SUV",
+        "price_per_day": 15324,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080907"
+    },
+    {
+        "_id": "CAR186",
+        "brand": "Changan",
+        "model": "Oshan X7",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 18569,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080923"
+    },
+    {
+        "_id": "CAR187",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2021,
+        "category": "Hatchback",
+        "price_per_day": 12950,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080941"
+    },
+    {
+        "_id": "CAR188",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2021,
+        "category": "SUV",
+        "price_per_day": 14968,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080958"
+    },
+    {
+        "_id": "CAR189",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2022,
+        "category": "Hatchback",
+        "price_per_day": 15657,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080976"
+    },
+    {
+        "_id": "CAR190",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 16153,
+        "city": "Multan",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.080994"
+    },
+    {
+        "_id": "CAR191",
+        "brand": "Changan",
+        "model": "Alsvin",
+        "year": 2021,
+        "category": "Sedan",
+        "price_per_day": 3320,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081085"
+    },
+    {
+        "_id": "CAR192",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2024,
+        "category": "SUV",
+        "price_per_day": 11459,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081105"
+    },
+    {
+        "_id": "CAR193",
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2022,
+        "category": "SUV",
+        "price_per_day": 18999,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081329"
+    },
+    {
+        "_id": "CAR194",
+        "brand": "Suzuki",
+        "model": "Swift",
+        "year": 2022,
+        "category": "Sedan",
+        "price_per_day": 16758,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081366"
+    },
+    {
+        "_id": "CAR195",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2024,
+        "category": "Sedan",
+        "price_per_day": 15894,
+        "city": "Lahore",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081387"
+    },
+    {
+        "_id": "CAR196",
+        "brand": "Suzuki",
+        "model": "Alto",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 15412,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            3,
+            5
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081405"
+    },
+    {
+        "_id": "CAR197",
+        "brand": "Toyota",
+        "model": "Land Cruiser",
+        "year": 2018,
+        "category": "Sedan",
+        "price_per_day": 8483,
+        "city": "Faisalabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            4,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081421"
+    },
+    {
+        "_id": "CAR198",
+        "brand": "Nissan",
+        "model": "Note",
+        "year": 2020,
+        "category": "Sedan",
+        "price_per_day": 9279,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            4,
+            3,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081437"
+    },
+    {
+        "_id": "CAR199",
+        "brand": "BMW",
+        "model": "3 Series",
+        "year": 2021,
+        "category": "Hatchback",
+        "price_per_day": 9188,
+        "city": "Islamabad",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            3,
+            5,
+            4
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081459"
+    },
+    {
+        "_id": "CAR200",
+        "brand": "Hyundai",
+        "model": "Tucson",
+        "year": 2023,
+        "category": "SUV",
+        "price_per_day": 11340,
+        "city": "Karachi",
+        "features": [
+            "AC",
+            "ABS",
+            "Airbags",
+            "Bluetooth"
+        ],
+        "ratings": [
+            5,
+            5,
+            3
+        ],
+        "availability": true,
+        "created_at": "2026-04-30 12:30:06.081478"
+    }
+]

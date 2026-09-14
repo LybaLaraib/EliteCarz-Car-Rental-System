@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{# Admin fleet page for car CRUD, search, and monthly top cars. #}
+{% block content %}
+<section class="hero">
+  <h2 style="margin:0;">Manage Cars</h2>
+  <p style="margin:8px 0 0; color: rgba(148,163,184,.95);">Add new cars on demand, view the full fleet, and manage your monthly top performers.</p>
+</section>
+
+<div class="card action-bar">
+  <a class="btn" href="/admin/cars?show_form=1">Add Car</a>
+  <a class="btn btn-secondary" href="/admin/cars?view_all=1">View All Cars</a>
+  <span class="badge">{% if view_all %}Showing: All Cars{% else %}Showing: Top Cars of the Month{% endif %}</span>
+</div>
+
+<form class="card search-row" method="GET" style="margin-top:14px;">
+  <input name="q" placeholder="Search by ID, brand, model, city, category" value="{{ q or '' }}">
+  <input type="hidden" name="view_all" value="1">
+  <button class="btn">Search</button>
+  <a class="btn btn-secondary" href="/admin/cars">Reset</a>
+</form>
+
+{% if show_form %}
+<section class="card form-card" style="margin-top:14px;">
+  <h3 style="margin-top:0;">{{ 'Update car details' if edit_car else 'Add a new car' }}</h3>
+  <form method="POST">
+    <input type="hidden" name="mode" value="{{ 'update' if edit_car else 'add' }}">
+    <input name="_id" placeholder="CAR201" required value="{{ edit_car._id if edit_car else '' }}">
+    <input name="brand" placeholder="Brand" required value="{{ edit_car.brand if edit_car else '' }}">
+    <input name="model" placeholder="Model" required value="{{ edit_car.model if edit_car else '' }}">
+    <input name="year" type="number" placeholder="Year" required value="{{ edit_car.year if edit_car else '' }}">
+    <input name="category" placeholder="Category" required value="{{ edit_car.category if edit_car else '' }}">
+    <input name="price_per_day" type="number" placeholder="Rent/day" required value="{{ edit_car.price_per_day if edit_car else '' }}">
+    <input name="city" placeholder="City" required value="{{ edit_car.city if edit_car else '' }}">
+    <input name="image_url" placeholder="Image URL" value="{{ edit_car.image_url if edit_car else '' }}">
+    <input name="features" placeholder="AC, ABS, Airbags" value="{{ (edit_car.features|join(', ')) if edit_car and edit_car.features else '' }}">
+    <div class="action-bar">
+      <button class="btn">{{ 'Update Car' if edit_car else 'Add New Car' }}</button>
+      <a class="btn btn-secondary" href="/admin/cars">Close</a>
+    </div>
+  </form>
+</section>
+{% endif %}
+
+{% if show_results %}
+  <h3 style="margin:18px 0 10px;">{% if view_all %}All Cars{% else %}Search Results{% endif %}</h3>
+  <div class="grid two">
+  {% for car in cars %}
+    <article class="car-card">
+      <img src="{{ car.image_url }}" alt="{{ car.brand }} {{ car.model }}" loading="lazy">
+      <div class="pad">
+        <h3 style="margin-top:0;">{{ car._id }} - {{ car.brand }} {{ car.model }}</h3>
+        <p style="margin:0 0 10px; color:rgba(148,163,184,.95);">{{ car.city }} • {{ car.category }} • PKR {{ car.price_per_day }}/day</p>
+        <div class="action-bar">
+          <a class="btn btn-secondary" href="/admin/cars?edit_id={{ car._id }}&show_form=1">Update Details</a>
+          <form method="POST">
+            <input type="hidden" name="mode" value="delete">
+            <input type="hidden" name="_id" value="{{ car._id }}">
+            <button class="btn btn-dark">Delete Car</button>
+          </form>
+        </div>
+      </div>
+    </article>
+  {% else %}
+    <p>No cars found.</p>
+  {% endfor %}
+  </div>
+
+  {% if cars_pager and cars_pager.total_pages > 1 %}
+  <div class="pagination">
+    {% if cars_pager.has_prev %}
+      <a href="?page={{ cars_pager.prev_page }}&per_page={{ cars_pager.per_page }}&view_all={{ '1' if view_all else '0' }}">Prev</a>
+    {% else %}
+      <span>Prev</span>
+    {% endif %}
+    <span class="current">Page {{ cars_pager.page }} / {{ cars_pager.total_pages }}</span>
+    {% if cars_pager.has_next %}
+      <a href="?page={{ cars_pager.next_page }}&per_page={{ cars_pager.per_page }}&view_all={{ '1' if view_all else '0' }}">Next</a>
+    {% else %}
+      <span>Next</span>
+    {% endif %}
+  </div>
+  {% endif %}
+{% endif %}
+
+{% if show_top %}
+  <h3 style="margin:18px 0 10px;">Top Cars of the Month</h3>
+  <p style="margin:0 0 12px; color:rgba(148,163,184,.95);">Highest revenue performers for the current month. (This section hides when you press “View All Cars”.)</p>
+  <div class="grid two">
+  {% for item in top_cars %}
+    <article class="car-card">
+      <img src="{{ item.car.image_url }}" alt="{{ item.car.brand }} {{ item.car.model }}" loading="lazy">
+      <div class="pad">
+        <h3 style="margin-top:0;">{{ item.car._id }} — {{ item.car.brand }} {{ item.car.model }}</h3>
+        <p style="margin:0 0 10px; color:rgba(148,163,184,.95);">{{ item.car.city }} • Revenue: PKR {{ item.total }} • Bookings: {{ item.bookings }}</p>
+        <div class="action-bar">
+          <a class="btn btn-secondary" href="/admin/cars?edit_id={{ item.car._id }}&show_form=1">Update Details</a>
+        </div>
+      </div>
+    </article>
+  {% else %}
+    <p>No top cars yet for this month.</p>
+  {% endfor %}
+  </div>
+  {% if top_pager and top_pager.total_pages > 1 %}
+  <div class="pagination">
+    {% if top_pager.has_prev %}
+      <a href="?top_page={{ top_pager.prev_page }}">Prev</a>
+    {% else %}
+      <span>Prev</span>
+    {% endif %}
+    <span class="current">Page {{ top_pager.page }} / {{ top_pager.total_pages }}</span>
+    {% if top_pager.has_next %}
+      <a href="?top_page={{ top_pager.next_page }}">Next</a>
+    {% else %}
+      <span>Next</span>
+    {% endif %}
+  </div>
+  {% endif %}
+{% endif %}
+{% endblock %}

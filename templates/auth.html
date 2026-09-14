@@ -1,0 +1,63 @@
+{# Entry page for user, guest, and admin access options. #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteCarz Auth</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="auth-page">
+<section class="auth-portal">
+  <div class="auth-splash">
+    <video autoplay muted loop playsinline>
+      <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+    </video>
+    <img class="auth-splash-img" src="/static/images/opening-login-window-picture.jpg" alt="EliteCarz">
+    <div class="auth-splash-content">
+      <h1 class="auth-title">EliteCarz</h1>
+      <p class="auth-subtitle">Choose how you want to enter — browse as a guest, sign in as a user, or manage the platform as admin.</p>
+      <div class="footer-badges">
+        <span class="pill">Fast bookings</span>
+        <span class="pill">City-wide coverage</span>
+        <span class="pill">Premium fleet</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-modal wide">
+      <h2 style="margin:0;">Sign in</h2>
+      <p style="margin:0; color: rgba(148,163,184,.95);">Select your access mode</p>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endwith %}
+
+      <div class="role-grid">
+        <a class="role-card" href="/login">
+          <span class="meta"><b>User</b><span>Book cars, manage bookings & reviews</span></span>
+          <span class="kbd">Enter</span>
+        </a>
+        <a class="role-card" href="/guest-enter">
+          <span class="meta"><b>Guest</b><span>Browse the fleet without booking</span></span>
+          <span class="kbd">Browse</span>
+        </a>
+        <a class="role-card" href="/admin-login">
+          <span class="meta"><b>Admin</b><span>Manage cars, revenue, blogs & queries</span></span>
+          <span class="kbd">Manage</span>
+        </a>
+      </div>
+
+      <div class="divider"></div>
+      <div class="auth-links">
+          <a href="/signup">Create new account</a>
+      </div>
+  </div>
+</section>
+
+<div style="position:fixed; left:0; right:0; bottom:0; padding:12px 16px; text-align:center; color:rgba(148,163,184,.95); font-size:12px;">
+  EliteCarz © — Secure rentals, premium experience.
+</div>
+</body>
+</html>

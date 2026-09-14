@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{# Car detail page with booking action and review section. #}
+{% block content %}
+<section class="car-detail">
+  <img src="{{ car.image_url }}" alt="{{ car.brand }}" onerror="this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80'">
+  <div>
+    <h2>{{ car.brand }} {{ car.model }}</h2>
+    <p>{{ car.city }} | {{ car.year }} | {{ car.category }}</p>
+    <p>Rent/day: PKR {{ car.price_per_day }}</p>
+    <p>Rating: {{ "★" * (car.rating_avg|round(0, 'floor')|int) }}{{ "☆" * (5 - (car.rating_avg|round(0, 'floor')|int)) }} ({{ car.rating_avg }})</p>
+    <p>Features: {{ car.features|join(", ") }}</p>
+    {% if g.role == "user" %}
+      <a class="btn" href="/book/{{ car._id }}">Book This Car</a>
+    {% elif g.role == "guest" %}
+      <a class="btn" href="/signup">Sign up to Book</a>
+    {% else %}
+      <span class="badge">Admin can view only</span>
+    {% endif %}
+  </div>
+</section>
+<section class="grid two">
+  <div class="card">
+    <h3>Add Review</h3>
+    {% if g.role == "user" %}
+      <form method="POST" action="/review/{{ car._id }}">
+        <label>Rating</label>
+        <select name="rating" required>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select>
+        <textarea name="comment" placeholder="Write your review" required></textarea>
+        <button class="btn">Submit Review</button>
+      </form>
+    {% elif g.role == "guest" %}
+      <p>Guest mode is read-only.</p>
+      <a class="btn" href="/signup">Sign up to add review</a>
+    {% else %}
+      <p>Admin has read-only access on this page.</p>
+    {% endif %}
+  </div>
+  <div class="card">
+    <h3>Recent Reviews</h3>
+    {% for r in reviews %}
+      <p><strong>{{ r.user_id }}</strong> - {{ "★" * r.rating }}{{ "☆" * (5 - r.rating) }}</p>
+      <p>{{ r.comment }}</p>
+      <hr>
+    {% else %}
+      <p>No reviews yet.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

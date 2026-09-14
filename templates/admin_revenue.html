@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{# Admin revenue page showing payment history and monthly city totals. #}
+{% block content %}
+<section class="hero">
+  <h2 style="margin:0;">Revenue</h2>
+  <p style="margin:8px 0 0; color: rgba(148,163,184,.95);">Track monthly performance, city-wise revenue and payment history.</p>
+  <div class="hero-actions">
+    <span class="badge">Current month total: <b>PKR {{ month_total }}</b></span>
+  </div>
+</section>
+
+<form class="card search-row" method="GET">
+  <input name="q" placeholder="Search booking id" value="{{ q or '' }}">
+  <select name="status">
+    <option value="">All Status</option>
+    <option value="paid" {% if status=='paid' %}selected{% endif %}>Paid</option>
+    <option value="pending" {% if status=='pending' %}selected{% endif %}>Pending</option>
+    <option value="unpaid" {% if status=='unpaid' %}selected{% endif %}>Unpaid</option>
+  </select>
+  <button class="btn">Filter</button>
+  <a class="btn btn-secondary" href="/admin/revenue">Reset</a>
+</form>
+
+<div class="grid two" style="margin-bottom:14px;">
+  <div class="card">
+    <h3 style="margin-top:0;">Revenue by City (current month)</h3>
+    <div class="grid two">
+      {% for c in city_breakdown %}
+        <div class="card" style="padding:12px;">
+          <b>{{ c._id or 'Unknown' }}</b>
+          <div style="color:rgba(148,163,184,.95);">PKR {{ c.total }} • {{ c.count }} payments</div>
+        </div>
+      {% else %}
+        <p style="margin:0; color:rgba(148,163,184,.95);">No city revenue found for current month.</p>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0;">Monthly Trend</h3>
+    <p style="margin:0 0 10px; color:rgba(148,163,184,.95);">Open Dashboard for full analytics charts.</p>
+    <a class="btn btn-secondary" href="/admin/dashboard">Go to Dashboard</a>
+  </div>
+</div>
+
+<h3 style="margin:18px 0 10px;">Payment Records</h3>
+<div class="grid two">
+{% for p in payments %}
+  <article class="card">
+    <h3 style="margin-top:0;">Booking: {{ p.booking_id }}</h3>
+    {% if p._car %}
+      <div class="car-detail" style="grid-template-columns: 160px 1fr; margin:0;">
+        <img src="{{ p._car.image_url or '' }}" alt="Car" style="height:120px;">
+        <div>
+          <p style="margin:0 0 6px;"><b>{{ p._car._id }}</b> — {{ p._car.brand }} {{ p._car.model }}</p>
+          <p style="margin:0; color:rgba(148,163,184,.95);">{{ p._car.city }} • PKR {{ p._car.price_per_day }}/day</p>
+        </div>
+      </div>
+    {% endif %}
+    <p style="margin:10px 0 0;">Amount: <b>PKR {{ p.amount }}</b></p>
+    <p style="margin:6px 0 0; color:rgba(148,163,184,.95);">Status: {{ p.status }} • Method: {{ p.method }}</p>
+  </article>
+{% else %}
+  <p>No payments found.</p>
+{% endfor %}
+</div>
+
+{% if pager and pager.total_pages > 1 %}
+<div class="pagination">
+  {% if pager.has_prev %}
+    <a href="?page={{ pager.prev_page }}&per_page={{ pager.per_page }}&q={{ q }}&status={{ status }}">Prev</a>
+  {% else %}
+    <span>Prev</span>
+  {% endif %}
+  <span class="current">Page {{ pager.page }} / {{ pager.total_pages }}</span>
+  {% if pager.has_next %}
+    <a href="?page={{ pager.next_page }}&per_page={{ pager.per_page }}&q={{ q }}&status={{ status }}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

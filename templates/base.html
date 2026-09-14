@@ -1,0 +1,124 @@
+{# Shared layout for navigation, flash messages, page content, and footer. #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteCarz</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="navbar">
+    <div class="brand">
+        <a href="{% if g.role=='admin' %}/admin/dashboard{% else %}/home{% endif %}">EliteCarz</a>
+        <span class="brand-tag">Premium rentals. Real-time control.</span>
+    </div>
+    <nav class="nav-links">
+        {% set path = request.path %}
+        {% if g.role == "admin" %}
+            <a class="{% if path.startswith('/admin/dashboard') %}active{% endif %}" href="/admin/dashboard">Dashboard</a>
+            <a class="{% if path.startswith('/admin/cars') %}active{% endif %}" href="/admin/cars">Cars</a>
+            <a class="{% if path.startswith('/admin/bookings') %}active{% endif %}" href="/admin/bookings">Manage Bookings</a>
+            <a class="{% if path.startswith('/admin/revenue') %}active{% endif %}" href="/admin/revenue">Revenue</a>
+            <a class="{% if path.startswith('/admin/blogs') %}active{% endif %}" href="/admin/blogs">Manage Blogs</a>
+            <a class="{% if path.startswith('/admin/queries') %}active{% endif %}" href="/admin/queries">Manage Queries</a>
+            <a class="{% if path.startswith('/admin/reviews') %}active{% endif %}" href="/admin/reviews">Manage Reviews</a>
+            <a class="{% if path.startswith('/admin/about') %}active{% endif %}" href="/admin/about">Manage About</a>
+        {% else %}
+            <a class="{% if path.startswith('/home') %}active{% endif %}" href="/home">Home</a>
+            <a class="{% if path.startswith('/cars') %}active{% endif %}" href="/cars">Cars</a>
+            <a class="{% if path.startswith('/about') %}active{% endif %}" href="/about">About</a>
+            <a class="{% if path.startswith('/contact') %}active{% endif %}" href="/contact">Contact</a>
+            <a class="{% if path.startswith('/blog') %}active{% endif %}" href="/blog">Blog</a>
+        {% endif %}
+        {% if g.role == "user" %}
+            <a class="{% if path.startswith('/dashboard') %}active{% endif %}" href="/dashboard">My Panel</a>
+            <a class="{% if path.startswith('/my-bookings') %}active{% endif %}" href="/my-bookings">Bookings</a>
+            <a class="{% if path.startswith('/my-reviews') %}active{% endif %}" href="/my-reviews">Reviews</a>
+            <a class="{% if path.startswith('/profile') %}active{% endif %}" href="/profile">My Profile</a>
+        {% endif %}
+        <span class="nav-spacer"></span>
+        {% if g.user_id %}
+            {% if g.role == "admin" %}
+              <a class="nav-cta" href="/admin/logout">Logout</a>
+            {% elif g.role == "guest" %}
+              <a class="nav-cta" href="/signup">Sign Up</a>
+            {% else %}
+              <a class="nav-cta" href="/logout">Logout</a>
+            {% endif %}
+        {% else %}
+            <a class="nav-cta" href="/auth">Sign In</a>
+        {% endif %}
+    </nav>
+</header>
+<main class="page">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <section class="flash-wrap">
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </section>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</main>
+<footer class="footer footer-big {% if g.role=='admin' %}footer-admin{% endif %}">
+    <section class="footer-inner {% if g.role=='admin' %}footer-inner-admin{% endif %}">
+        <div class="footer-col">
+            <div class="footer-brand">EliteCarz</div>
+            <p class="footer-muted">Smart rentals for every city — with premium cars and reliable support.</p>
+            <div class="footer-badges">
+                <span class="pill">24/7 Support</span>
+                <span class="pill">Verified Cars</span>
+                <span class="pill">Secure Bookings</span>
+            </div>
+        </div>
+        {% if g.role != "admin" %}
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="/home">Home</a>
+            <a href="/cars">Cars</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </div>
+        {% else %}
+        <div class="footer-col">
+            <h4>Admin Tools</h4>
+            <a href="/admin/dashboard">Dashboard</a>
+            <a href="/admin/cars">Manage Cars</a>
+            <a href="/admin/bookings">Manage Bookings</a>
+            <a href="/admin/revenue">Revenue</a>
+            <a href="/admin/queries">Queries</a>
+        </div>
+        {% endif %}
+        <div class="footer-col">
+            <h4>Policies</h4>
+            <a href="/policies">Policies overview</a>
+            <a href="/policies#terms">Terms</a>
+            <a href="/policies#privacy">Privacy</a>
+            <a href="/policies#refunds">Refunds</a>
+        </div>
+        {% if g.role != "admin" %}
+        <div class="footer-col">
+            <h4>Account</h4>
+            {% if g.role == "user" %}
+              <a href="/dashboard">My Panel</a>
+              <a href="/my-bookings">My Bookings</a>
+              <a href="/my-reviews">My Reviews</a>
+              <a href="/profile">Profile</a>
+            {% else %}
+              <a href="/auth">Sign In</a>
+              <a href="/signup">Create account</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </section>
+    <section class="footer-bottom">
+        <p class="footer-muted">© EliteCarz. All rights reserved.</p>
+    </section>
+</footer>
+<script src="/static/js/script.js"></script>
+</body>
+</html>

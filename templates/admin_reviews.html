@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{# Admin moderation page for customer reviews. #}
+{% block content %}
+<h2>Review Moderation</h2>
+<form class="card search-row" method="GET">
+  <input name="q" placeholder="Search user, car, comment" value="{{ q or '' }}">
+  <button class="btn">Filter</button>
+  <a class="btn btn-secondary" href="/admin/reviews">Reset</a>
+</form>
+<div class="grid two">
+{% for r in reviews %}
+  <article class="card">
+    <h3>{{ r.car_id }} - {{ r.user_id }}</h3>
+    <p>{{ "★" * r.rating }}{{ "☆" * (5-r.rating) }}</p>
+    <p>{{ r.comment }}</p>
+    <form method="POST" action="/admin/reviews/delete/{{ r._id }}">
+      <button class="btn btn-dark">Delete Review</button>
+    </form>
+  </article>
+{% endfor %}
+</div>
+
+{% if pager and pager.total_pages > 1 %}
+<div class="pagination">
+  {% if pager.has_prev %}
+    <a href="?page={{ pager.prev_page }}&per_page={{ pager.per_page }}&q={{ q }}">Prev</a>
+  {% else %}
+    <span>Prev</span>
+  {% endif %}
+  <span class="current">Page {{ pager.page }} / {{ pager.total_pages }}</span>
+  {% if pager.has_next %}
+    <a href="?page={{ pager.next_page }}&per_page={{ pager.per_page }}&q={{ q }}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}
